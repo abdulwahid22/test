@@ -1,0 +1,19 @@
+<div class="container">
+  <h3 style="text-align: center;">{{monthName}}-{{yearName}}</h3>
+  <table>
+        <tr>
+          <th style="width:10px;">Hours</th>
+          <th style="text-align:center"> Title</th>
+          <th></th>
+          <th style="text-align:left">Action</th>
+        </tr>
+        <tr *ngFor="let appointment of appointments">
+          <td style="background-color:#04AA6D;color:white"> {{appointment.hour}}</td>
+          <td (click)='add(appointment.id,appointment.date)' style="text-align:center">{{appointment.title}}</td>
+        
+          <td style="width:10px;" [routerLink]="['/calendar/edit', appointment.id]">Edit</td>
+          <td style="width:10px;" (click)="deleteAppointment(appointment.id)">Delete</td>
+        </tr>
+    </table>
+   
+</div>

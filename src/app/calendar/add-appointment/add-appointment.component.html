@@ -1,0 +1,29 @@
+<div class="container register">
+    <div class="row">
+  
+      <div class="col-md-12 register-right">
+  
+        <div class="row register-form">
+          <div class="col-md-12">
+            <form class="form-horizontal" #f="ngForm" novalidate (ngSubmit)="f.form.valid && onSubmit()">
+             
+                <div class="form-group">
+                    <input type="text" class="form-control"  required name="title" [(ngModel)]="title"
+                      placeholder="First Name *" value="" />
+      
+                     
+                  </div>
+              
+              <input type="submit" class="btn btn-success" value="Save" />
+            </form>
+          </div>
+  
+        </div>
+  
+  
+  
+      </div>
+  
+    </div>
+  
+  </div>
